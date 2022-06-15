@@ -13,7 +13,9 @@ migratedown:
 sqlc:
 	sqlc generate
 
+test:
+	go test -v -cover ./...
 
 #.PHONY explicitly says to the system that commands aren't files,
 # by default Makefile will look for files
-.PHONY: createdb dropdb migrateup migratedown sqlc
+.PHONY: createdb dropdb migrateup migratedown sqlc test
